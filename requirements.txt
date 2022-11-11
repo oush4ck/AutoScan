@@ -1,0 +1,7 @@
+colorama
+requests
+pwntools
+cloudscraper
+beautifulsoup4
+h8mail
+vt-py
