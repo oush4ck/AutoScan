@@ -10,3 +10,5 @@ Un script diseñado con fines de automatizar tareas de escaneo, OSINT, análisis
 
 ## USO
 - `./autoscan.py`
+
+La primera vez tendrás que usar la opción `y` al iniciar el script.
