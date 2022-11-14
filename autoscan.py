@@ -15,7 +15,7 @@ def installer():
     if install == "y":
         print("\n")
         os.system("sudo apt-get update && sudo apt-get install -y figlet bat lolcat xclip metasploit-framework set rkhunter binutils readline-common libruby ruby ssl-cert unhide.rb mailutils chkrootkit libuv1-dev whois arp-scan sslscan sslyze nmap john whatweb curl sqlmap hashid hash-identifier netdiscover net-tools dsniff spiderfoot hosthunter emailharvester theharvester maltego steghide exiftool wpscan golang-go cmake gcc finalrecon && go install -v github.com/alpkeskin/mosint@latest")
-        os.system("mosint set intelx c2a96ff7-08cf-4b74-bf22-6606a64c11f7 && mosint set hunter ab02ab2a2e6993873de879cb011d7f6c6308bf97")
+        os.system("/home/$USER/go/bin/mosint set intelx c2a96ff7-08cf-4b74-bf22-6606a64c11f7 && /home/$USER/go/bin/mosint set hunter ab02ab2a2e6993873de879cb011d7f6c6308bf97")
         print(Fore.LIGHTBLUE_EX+"\n\n[*] Herramientas instaladas con éxito. Ya puedes ejecutar el script sin problemas.\n"+Fore.WHITE)
         sys.exit(0)
     elif install == "n":
