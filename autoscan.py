@@ -203,7 +203,22 @@ def file_analysis():
     print(Fore.GREEN+Style.BRIGHT+"\n\n[+] Análisis finalizado...\n"+Fore.WHITE+Style.NORMAL)
     sys.exit(0)
 
-installer()
+def dir_searcher():
+    os.system("clear && figlet 'Files & Dir finder' | lolcat")
+    print(Fore.LIGHTMAGENTA_EX+Style.DIM+"\n[!] Hoy estas de suerte porque esta herramienta no deja ningun rastro en los servidores de la victima :)\n"+Fore.WHITE+Style.NORMAL)
+    time.sleep(2)
+    urls = input(Fore.LIGHTWHITE_EX+Style.BRIGHT+"Introduzca los sitios a descubrir todos los directorios y archivos, si son varios, ponlos entre espacios (ex. https://www.domain.com http://www.wtfisthis.org https://www.sitio.es ) >> "+Fore.WHITE+Style.NORMAL)
+    print(Fore.LIGHTRED_EX+"\n[#] Aunque esto no deje rastros, recuerda hacerlo con fines éticos !! \n"+Fore.WHITE)
+    time.sleep(5)
+    os.system("/home/$USER/.local/bin/dirhunt -t 200 -x 404 --limit 15000 %s 2>/dev/null" % (urls))
+    print(Fore.GREEN+Style.BRIGHT+"\n\n[+] Todo finalizado. Ya puede husmear lo que haga falta.\n"+Fore.WHITE+Style.NORMAL)
+    
+if os.getuid() == 0:
+    os.system("clear")
+    print(Fore.RED+Style.BRIGHT+"\n[!] NO EJECUTE ESTE SCRIPT COMO ROOT !!!\n"+Fore.WHITE+Style.NORMAL)
+    sys.exit(1)
+else:
+    installer()
 
 os.system("clear && figlet AutoScan | lolcat")
 print(Fore.LIGHTGREEN_EX+Style.BRIGHT+"Made by anmh4ck\n\n"+Style.NORMAL+Fore.WHITE)
@@ -224,7 +239,8 @@ print("[1] Escanear todo el rango de puertos por TCP usando nmap\n"
       "[14] Enumerar una página web hecha en WordPress (wpscan)\n"
       "[15] Realizar OSINT a una dirección e-mail (mosint)\n"
       "[16] Aplicar FULL análisis a un sitio web (finalrecon)\n"
-      "[17] Analizar un archivo en busca de virus (msf-virustotal)"
+      "[17] Analizar un archivo en busca de virus (msf-virustotal)\n"
+      "[18] Buscar directorios y archivos en un sitio web sin fuerza bruta (dirhunt)"
       )
 
 select = input(Style.DIM+Fore.MAGENTA+"\nSelecciona un número >> "+Style.NORMAL+Fore.WHITE)
@@ -263,6 +279,8 @@ elif select == "16":
     fullwebrecon()
 elif select == "17":
     file_analysis()
+elif select == "18":
+    dir_searcher()
 
 else:
     print(Fore.RED+"\n[!] Opción incorrecta. Saliendo...\n"+Fore.WHITE)

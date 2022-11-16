@@ -5,3 +5,4 @@ cloudscraper
 beautifulsoup4
 h8mail
 vt-py
+dirhunt
