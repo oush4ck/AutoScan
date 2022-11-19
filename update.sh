@@ -11,5 +11,6 @@ cd ..
 rm -rf  AutoScan >> temp
 rm temp
 chmod +x autoscan.py
+python3 -m pip install -r requirements.txt
 echo -e "\n\n\e[0;32m ACTUALIZACION FINALIZADA CON ÉXITO !\n\n"
 fi
