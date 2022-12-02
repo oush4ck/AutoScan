@@ -221,7 +221,7 @@ else:
     installer()
 
 os.system("clear && figlet AutoScan | lolcat")
-print(Fore.LIGHTGREEN_EX+Style.BRIGHT+"Made by anmh4ck\n\n"+Style.NORMAL+Fore.WHITE)
+print(Fore.LIGHTGREEN_EX+Style.BRIGHT+"Made by oush4ck\n\n"+Style.NORMAL+Fore.WHITE)
 
 print("[1] Escanear todo el rango de puertos por TCP usando nmap\n"
       "[2] Escanear todo el rango de puertos por UDP usando nmap\n"
