@@ -3,7 +3,7 @@
 clear
 sudo apt install git -y
 echo -e "\n\n\e[0;34m ACTUALIZANDO...\e[0;37m \n"
-git clone https://github.com/anmh4ck2/AutoScan.git
+git clone https://github.com/oush4ck/AutoScan.git
 if [[ -s AutoScan/autoscan.py ]];then
 cd AutoScan
 cp -r -f * .. > temp
