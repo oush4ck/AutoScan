@@ -1,6 +1,6 @@
 # AutoScan
 Un script diseñado con fines de automatizar tareas de escaneo, OSINT, análisis, etc.
-![imagen](https://user-images.githubusercontent.com/116729095/202274973-fff8e9ea-3cf1-4e4b-92d8-25e5d15c5ff5.png)
+![imagen](https://user-images.githubusercontent.com/116729095/206595388-439c198b-7c68-4412-9397-c5a1e4aa9b4a.png)
 
 
 ## Instalación
