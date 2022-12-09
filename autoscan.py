@@ -212,7 +212,13 @@ def dir_searcher():
     time.sleep(5)
     os.system("/home/$USER/.local/bin/dirhunt -t 200 -x 404 --limit 15000 %s 2>/dev/null" % (urls))
     print(Fore.GREEN+Style.BRIGHT+"\n\n[+] Todo finalizado. Ya puede husmear lo que haga falta.\n"+Fore.WHITE+Style.NORMAL)
-    
+
+def get_hostname():
+    os.system("clear && figlet 'IP to Hostname' | lolcat")
+    ip = input(Fore.LIGHTCYAN_EX+Style.BRIGHT+"\nIntroduzca la IP a obtener su dominio correspondiente >> "+Fore.WHITE+Style.NORMAL)
+    hostname = socket.gethostbyaddr(ip)
+    print(Fore.GREEN+Style.DIM+f"\n\n[+] El DNS asociado a la dirección IP {ip} es {hostname}\n"+Fore.WHITE+Style.NORMAL)
+
 if os.getuid() == 0:
     os.system("clear")
     print(Fore.RED+Style.BRIGHT+"\n[!] NO EJECUTE ESTE SCRIPT COMO ROOT !!!\n"+Fore.WHITE+Style.NORMAL)
@@ -240,7 +246,8 @@ print("[1] Escanear todo el rango de puertos por TCP usando nmap\n"
       "[15] Realizar OSINT a una dirección e-mail (mosint)\n"
       "[16] Aplicar FULL análisis a un sitio web (finalrecon)\n"
       "[17] Analizar un archivo en busca de virus (msf-virustotal)\n"
-      "[18] Buscar directorios y archivos en un sitio web sin fuerza bruta (dirhunt)"
+      "[18] Buscar directorios y archivos en un sitio web sin fuerza bruta (dirhunt)\n"
+      "[19] Obtener el dominio de una IP"
       )
 
 select = input(Style.DIM+Fore.MAGENTA+"\nSelecciona un número >> "+Style.NORMAL+Fore.WHITE)
@@ -281,6 +288,8 @@ elif select == "17":
     file_analysis()
 elif select == "18":
     dir_searcher()
+elif select == "19":
+    get_hostname()
 
 else:
     print(Fore.RED+"\n[!] Opción incorrecta. Saliendo...\n"+Fore.WHITE)
