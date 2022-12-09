@@ -218,6 +218,7 @@ def get_hostname():
     ip = input(Fore.LIGHTCYAN_EX+Style.BRIGHT+"\nIntroduzca la IP a obtener su dominio correspondiente >> "+Fore.WHITE+Style.NORMAL)
     hostname = socket.gethostbyaddr(ip)
     print(Fore.GREEN+Style.DIM+f"\n\n[+] El DNS asociado a la dirección IP {ip} es {hostname}\n"+Fore.WHITE+Style.NORMAL)
+    sys.exit(0)
 
 if os.getuid() == 0:
     os.system("clear")
