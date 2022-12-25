@@ -6,7 +6,7 @@ Un script diseñado con fines de automatizar tareas de escaneo, OSINT, análisis
 ## Instalación
 - `git clone https://github.com/anmh4ck2/AutoScan`
 - `cd AutoScan`
-- `python3 -m pip install -r requirements.txt`
+- `python3 -m pip install --upgrade -r requirements.txt`
 - `chmod +x update.sh`
 - `chmod +x autoscan.py`
 
